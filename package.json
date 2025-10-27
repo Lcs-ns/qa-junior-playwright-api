@@ -1,0 +1,14 @@
+{
+  "name": "qa-junior-playwright-api",
+  "version": "1.0.0",
+  "description": "Testes de API usando o framework Playwright",
+  "main": "index.js",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "dotenv": "^17.2.3"
+  }
+}
