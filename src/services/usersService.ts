@@ -20,11 +20,7 @@ export class UsersService {
     getUser(id: number) {
         return this.ctx.get(`${baseUrl}/users/${id}`);
     }
-
-    listUsers(params?: Record<string, any>) {
-        return this.ctx.get(`${baseUrl}/users`, { params });
-    }
-
+    
     updateUser(id: number, data: Partial<CreateUserPayload>) {
         return this.ctx.patch(`${baseUrl}/users/${id}`, { data });
     }
