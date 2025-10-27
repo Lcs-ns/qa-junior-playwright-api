@@ -1,4 +1,4 @@
-import { APIRequestContext, request, Response } from '@playwright/test';
+import { APIRequestContext } from '@playwright/test';
 import { CreateUserPayload } from '../types/userType';
 import * as dotenv from 'dotenv';
 
@@ -16,15 +16,19 @@ export class UsersService {
     createUser(data: CreateUserPayload) {
         return this.ctx.post(`${baseUrl}/users`, { data });
     }
+
     getUser(id: number) {
         return this.ctx.get(`${baseUrl}/users/${id}`);
     }
+
     listUsers(params?: Record<string, any>) {
-        return this.ctx.get(`${baseUrl}/users/`, { params });
+        return this.ctx.get(`${baseUrl}/users`, { params });
     }
+
     updateUser(id: number, data: Partial<CreateUserPayload>) {
         return this.ctx.patch(`${baseUrl}/users/${id}`, { data });
     }
+    
     deleteUser(id: number) {
         return this.ctx.delete(`${baseUrl}/users/${id}`);
     }
